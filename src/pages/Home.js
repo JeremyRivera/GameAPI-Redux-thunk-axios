@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import GameDetail from "../components/GameDetail";
 import Game from "../components/Game";
 //Redux
 import { useDispatch, useSelector } from "react-redux";
@@ -18,6 +19,7 @@ const Home = () => {
   );
   return (
     <GameList>
+      <GameDetail />
       <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (
@@ -71,4 +73,5 @@ const Games = styled(motion.div)`
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
 `;
+
 export default Home;
